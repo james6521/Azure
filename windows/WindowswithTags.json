@@ -220,6 +220,7 @@
         "[resourceId('Microsoft.Network/networkInterfaces', variables('nicName'))]"
       ],
       "properties": {
+        "licenseType": "Windows_Server",
         "hardwareProfile": {
           "vmSize": "[parameters('vmSize')]"
         },
