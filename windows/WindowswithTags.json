@@ -233,7 +233,7 @@
           "Created By": "[parameters('createdBy')]"
         },
         "dependsOn": [
-          "[resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName'))]",
+          "[resourceId('Microsoft.Storage/storageAccounts', variables('storageAc'))]",
           "[resourceId('Microsoft.Network/networkInterfaces', variables('nicName'))]"
         ],
         "properties": {
