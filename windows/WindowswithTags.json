@@ -87,7 +87,7 @@
       }
     },
     "variables": {
-      "storageAccountName": "[concat(uniquestring(resourceGroup().id), 'satvm')]",
+      "storageAc": "[concat(uniquestring(resourceGroup().id), 'satvm')]",
       "imagePublisher": "MicrosoftWindowsServer",
       "imageOffer": "WindowsServer",
       "nicName": "myVMNic",
@@ -106,7 +106,7 @@
       {
         "type": "Microsoft.Storage/storageAccounts",
         "apiVersion": "2019-04-01",
-        "name": "[variables('storageAccountName')]",
+        "name": "[variables('storageAc')]",
         "location": "[parameters('location')]",
         "kind": "Storage",
         "sku": {
