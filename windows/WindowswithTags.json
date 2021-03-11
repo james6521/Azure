@@ -238,6 +238,7 @@
         ],
         "properties": {
           "hardwareProfile": {
+            "licenseType": "Windows_Server",
             "vmSize": "[parameters('vmSize')]"
           },
           "osProfile": {
