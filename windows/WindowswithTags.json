@@ -87,7 +87,7 @@
       }
     },
     "variables": {
-      "storageAccountName": "[concat(uniquestring(resourceGroup().id), 'satagsvm')]",
+      "storageAccountName": "[concat(uniquestring(resourceGroup().id), 'satvm')]",
       "imagePublisher": "MicrosoftWindowsServer",
       "imageOffer": "WindowsServer",
       "nicName": "myVMNic",
