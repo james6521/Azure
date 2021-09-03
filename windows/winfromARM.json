@@ -9,6 +9,7 @@
       }
     },
     "parameters": {
+      },
       "adminPassword": {
         "type": "secureString",
         "minLength": 12,
@@ -207,7 +208,7 @@
       {
         "type": "Microsoft.Compute/virtualMachines",
         "apiVersion": "2021-03-01",
-        "name": "[parameters('vmName')]",
+        "name": "[variables('vmName')]",
         "location": "[parameters('location')]",
         "properties": {
           "hardwareProfile": {
