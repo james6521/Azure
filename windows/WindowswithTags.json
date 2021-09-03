@@ -9,12 +9,6 @@
     }
   },
   "parameters": {
-    "adminUsername": {
-      "type": "string",
-      "metadata": {
-        "description": "Username for the Virtual Machine."
-      }
-    },
     "adminPassword": {
       "type": "secureString",
       "minLength": 12,
@@ -95,16 +89,10 @@
         "description": "Location for all resources."
       }
     },
-    "vmName": {
-      "type": "string",
-      "defaultValue": "simple-vm",
-      "metadata": {
-        "description": "Name of the virtual machine."
-      }
-    }
   },
   "functions": [],
   "variables": {
+    "vmName": "<%= customOptions.winName %>",
     "storageAccountName": "[format('bootdiags{0}', uniqueString(resourceGroup().id))]",
     "nicName": "myVMNic",
     "addressPrefix": "10.0.0.0/16",
@@ -227,7 +215,7 @@
         },
         "osProfile": {
           "computerName": "[parameters('vmName')]",
-          "adminUsername": "[parameters('adminUsername')]",
+          "adminUsername": "<%=username%>",
           "adminPassword": "[parameters('adminPassword')]"
         },
         "storageProfile": {
