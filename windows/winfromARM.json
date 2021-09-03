@@ -9,7 +9,6 @@
       }
     },
     "parameters": {
-      },
       "adminPassword": {
         "type": "secureString",
         "minLength": 12,
