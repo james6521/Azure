@@ -5,10 +5,10 @@ variable subscription_id {}
 variable client_id {}
 variable client_secret {}
 variable tenant_id {}
-variable "resource_name" {
-	description ="Resource Name"
-	default=""
-}
+##variable "resource_name" {
+##	description ="Resource Name"
+##	default=""
+##}
 #################################
 ##          Provider           ##
 #################################
