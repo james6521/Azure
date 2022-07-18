@@ -10,7 +10,7 @@ variable rsg_name{default="<%=customOptions.resname%>"}
 variable region_code {default="<%=group.code%>"}
 variable instance_name {default="<%=instance.name%>"}
 variable admin_username {default="<%=instance.createdByUser.linuxUsername%>"}
-variable admin_password {default="pswwd"}
+variable admin_password {default="<%=instance.createdByUser.linuxUserpassword%>"}
 
 #################################
 ##          Provider           ##
@@ -168,6 +168,6 @@ resource "azurerm_linux_virtual_machine" "myterraformvm" {
     }
 
     tags = {
-        environment = var.admin_username
+        environment = var.admin_password
     }
 }
