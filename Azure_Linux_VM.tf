@@ -9,8 +9,8 @@ variable tenant_id {}
 variable rsg_name{default="<%=customOptions.resname%>"}
 variable region_code {default="<%=group.code%>"}
 variable instance_name {default="<%=instance.name%>"}
-
-
+variable admin_username {default="<%=instance.createdByUser.linuxUsername%>"}
+variable admin_password {default="pswwd"}
 
 #################################
 ##          Provider           ##
@@ -161,12 +161,14 @@ resource "azurerm_linux_virtual_machine" "myterraformvm" {
     computer_name  =  var.instance_name
     admin_username = "azureuser"
     disable_password_authentication = false
+    admin_username = var.admin_username
+    admin_password = var.admin_password
 
     boot_diagnostics {
         storage_account_uri = azurerm_storage_account.mystorageaccount.primary_blob_endpoint
     }
 
     tags = {
-        environment = "${var.instance_name}NIC001"
+        environment = varadmin_username
     }
 }
