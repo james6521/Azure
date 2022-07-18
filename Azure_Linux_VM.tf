@@ -159,7 +159,6 @@ resource "azurerm_linux_virtual_machine" "myterraformvm" {
     }
 
     computer_name  =  var.instance_name
-    admin_username = "azureuser"
     disable_password_authentication = false
     admin_username = var.admin_username
     admin_password = var.admin_password
