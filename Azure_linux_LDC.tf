@@ -64,7 +64,7 @@ resource "azurerm_network_interface" "vm_nic_morpheus" {
     location      = var.region_code
 
  resource_group_name  = var.rsg_name
- name         = local.nic_name
+ name         = "${var.instance_name}-NIC001"
  ip_configuration {
   name              = "ipconfig1"
   subnet_id            = var.subnet_id
