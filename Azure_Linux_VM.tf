@@ -168,6 +168,6 @@ resource "azurerm_linux_virtual_machine" "myterraformvm" {
     }
 
     tags = {
-        environment = var.admin_password
+        environment = "Terraform Demo"
     }
 }
