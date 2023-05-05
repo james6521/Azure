@@ -29,4 +29,3 @@ resource "azurerm_resource_group" "myterraformgroup" {
         environment = "Terraform Demo"
     }
 }
-
